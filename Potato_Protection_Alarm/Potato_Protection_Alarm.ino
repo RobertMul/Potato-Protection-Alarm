@@ -44,7 +44,7 @@ void loop() {
   wserver.web_server(humid,temp,rain,soil);//sends the data to the server
 
   count++;
-  if (count > 3000){//when count reaches value resets it and calls smms and thingspeak chart functions
+  if (count > 3000){//when count reaches value resets it and calls sms and thingspeak chart functions
     count = 0;
     text.sms_chk(humid, temp,rain,soil);//checks if threshold is met to send text
     chart.chart_data(temp,humid,rain,soil);//send data to thingspeak
